@@ -1,0 +1,206 @@
+:root{
+    /* CSS HEX */
+    --ivory: #f6f7ebff;
+    --cinnabar: #e94f37ff;
+    --onyx: #121619ff;
+    --steel-blue: #3f88c5ff;
+    --keppel: #44bba4ff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--onyx);
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    position: relative;
+    color: var(--ivory);
+    max-width: 100px;
+}
+
+.nav-logo img{
+    width: 100%;
+    height: 100%;
+    filter:drop-shadow(30 10 5px black);
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    color: var(--ivory);
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.link a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--keppel);
+    transition: all 0.3s ease;
+}
+
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    background-color: var(--keppel);
+    color: var(--ivory);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--cinnabar);
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position:absolute;
+    box-shadow: 0 0 1000px 50px var(--keppel);
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    color: var(--ivory);
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: var(--keppel);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 1px var(--cinnabar); */
+    -webkit-text-stroke: 1px var(--keppel);
+
+}
+
+header .content p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+header img{
+    position:relative;
+
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--ivory);
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.projects{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.projects .card{
+    display: grid;
+    border-color: var(--keppel);    
+    border: 5px solid var(--onyx);
+    padding: 1rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.projects .card:hover{
+    transform: translateY(-10px);
+    border: 5px solid var(--keppel);
+    box-shadow: 0 0 10px 5px black;
+}
+.projects .card img{
+    padding: 1rem
+}
+
+.projects .card h4{
+    text-align: center;
+    color: var(--ivory);
+}
+
+.projects .card p{
+    text-align: center;
+    color: var(--ivory);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
