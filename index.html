@@ -29,7 +29,7 @@
         <ul class="nav-links">
             <li class="link"><a href="#">Home</a></li>
             <li class="link"><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
-            <li class="link"><a href="#">Founders</a></li>
+            <li class="link"><a href="#founders" onclick="scrollToSection('founders')">Founders</a></li>
             <li class="link"><a href="#">Future</a></li>
             <li class="link"><a href="#">About</a></li>
         </ul>
@@ -63,7 +63,44 @@
                 <h4>Prop Closet Podcast</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, a eos pariatur voluptates vero non reprehenderit laboriosam fugit nemo? Doloremque sed facilis laboriosam autem sapiente quod, culpa nesciunt error consectetur.</p>
             </div>
+
+            <div class="card" data-tilt data-tilt-glare>
+                <div class="card-image">
+                    <img src="images/PCP.png" alt="PropClosetPodcast">
+                </div>
+                <h4>Prop Closet Podcast</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, a eos pariatur voluptates vero non reprehenderit laboriosam fugit nemo? Doloremque sed facilis laboriosam autem sapiente quod, culpa nesciunt error consectetur.</p>
+            </div>
+
+            <div class="card" data-tilt data-tilt-glare>
+                <div class="card-image">
+                    <img src="images/PCP.png" alt="PropClosetPodcast">
+                </div>
+                <h4>Prop Closet Podcast</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, a eos pariatur voluptates vero non reprehenderit laboriosam fugit nemo? Doloremque sed facilis laboriosam autem sapiente quod, culpa nesciunt error consectetur.</p>
+            </div>
         </div>
+    </section>
+
+    <section class="container" id="founders">
+        <h2 class="header" id="display-founder-name">OUR FOUNDERS</h2>
+        <p>Click on any of the cards to find out about each of the founders</p>
+
+       <div class="founders">
+
+            <div class="card-group" onmouseleave="resetFounderText()">
+                <div class="profile-big-card" id="sai" onclick="founderCardClicked('brandon')">
+                    <img src="images/testProfileCard.png" alt="">
+                </div>
+                <div class="profile-big-card" id="alex" onclick="founderCardClicked('alex')">
+                    <img src="images/testProfileCard.png" alt="">
+                </div>
+                
+                <div class="profile-big-card" id="brandon" onclick="founderCardClicked('sai')">
+                    <img src="images/testProfileCard.png" alt="">
+                </div>
+            </div>
+       </div>
     </section>
 
     <script src="javascript/script.js"></script>

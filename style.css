@@ -19,6 +19,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 img{
     width: 100%;
     height: 100%;
@@ -236,6 +237,63 @@ section .header {
     margin-top: 1rem;
     padding: 0 1rem 1rem 1rem;
 }
+
+.founders {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15rem;
+    margin-bottom: 15rem;;
+}
+
+#founders p {
+    text-align: center;
+    color: var(--ivory);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+}
+
+.card-group {
+    margin: 0 15rem 0 15rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-big-card {
+    position: absolute;
+    max-width: 350px;
+    max-height: 490px;
+    padding: 3rem;
+    border-radius: 15px;
+    aspect-ratio: 5/7;
+    transition: all 0.3s cubic-bezier(.17,.67,.11,.96);
+}
+
+.profile-big-card:nth-child(1) {
+    transform: translateX(-9%) rotate(-5deg);
+}
+.profile-big-card:nth-child(3) {
+    transform: translateX(9%) rotate(5deg);
+}
+
+.card-group:hover > .profile-big-card:nth-child(1) {
+    transform: translate(-40%, 5%) rotate(-40deg);
+}
+
+.card-group:hover > .profile-big-card:nth-child(2) {
+    transform: translate(0, -5%) rotate(0deg);
+}
+
+.card-group:hover > .profile-big-card:nth-child(3) {
+    transform: translate(40%, 5%) rotate(40deg);
+}
+
+
+
 
 
 @keyframes hueChange {
