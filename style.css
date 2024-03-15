@@ -175,7 +175,8 @@ section .header {
 .projects{
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 250px);
     gap: 2rem;
 }
 
@@ -203,18 +204,28 @@ section .header {
     width: 100%;
     height: 100%;
     background: var(--onyx);
-    border-radius: 18px;
     transition: all 0.3s ease;
     z-index: -1;
 }
 
 
 .projects .card:hover::before{
-    animation: hueChange 5s linear infinite;
-    background: tomato;
+    /* animation: hueChange 5s linear infinite;
+    background: tomato; */
+    animation: hueChange 15s linear infinite;
+    background: var(--keppel);
+    border-radius: 18px;
     height: calc(100% + 10px);
     width: calc(100% + 10px);
     box-shadow: 0 0 10px 5px black;
+}
+
+.projects .card:hover p{
+    color: var(--onyx);
+}
+
+.projects .card:hover h4{
+    color: var(--onyx);
 }
 
 .projects .card .card-image{
@@ -273,6 +284,12 @@ section .header {
     transition: all 0.3s cubic-bezier(.17,.67,.11,.96);
 }
 
+.profile-big-card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+}
+
 .profile-big-card:nth-child(1) {
     transform: translateX(-9%) rotate(-5deg);
 }
@@ -290,6 +307,11 @@ section .header {
 
 .card-group:hover > .profile-big-card:nth-child(3) {
     transform: translate(40%, 5%) rotate(40deg);
+}
+
+.profile-big-card:hover img{
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px 5px black;
 }
 
 
