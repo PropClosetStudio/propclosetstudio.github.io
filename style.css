@@ -3,6 +3,7 @@
     --ivory: #f6f7ebff;
     --cinnabar: #e94f37ff;
     --onyx: #121619ff;
+    --darker-onyx: #0d1014ff;
     --steel-blue: #3f88c5ff;
     --keppel: #44bba4ff;
 }
@@ -203,7 +204,8 @@ section .header {
     content: '';
     width: 100%;
     height: 100%;
-    background: var(--onyx);
+    background: var(--darker-onyx);
+    border-radius: 12px;
     transition: all 0.3s ease;
     z-index: -1;
 }
@@ -315,9 +317,6 @@ section .header {
 }
 
 
-
-
-
 @keyframes hueChange {
     50% {
         filter: hue-rotate(350deg);
@@ -333,5 +332,118 @@ section .header {
     to {
         opacity: 50%;
         transform: translateY(100%)
+    }
+}
+
+
+.future-text {
+    text-align: center;
+    color: var(--ivory);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.future-container {
+    max-width: 1200px;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+.future-card {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    max-width: 400px;
+    max-height: 800px;
+  
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+
+    border: 10px ; 
+    overflow: hidden;
+}
+
+.future-card:hover {
+    filter: drop-shadow(0 0 10px black);
+}
+
+.future-card::before{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 180%;
+    background: var(--keppel);
+    transform:rotate(45deg);
+    z-index: -2;
+}
+
+.future-card:hover::before{
+    transition: all 0.3s ease;
+    opacity: 1;
+    animation: hueRotateChange 1.5s linear infinite;
+}
+
+.future-card:not(:hover)::before{
+    transition: all 0.3s ease;
+    opacity: 0;
+
+}
+
+.future-card::after{
+    position: absolute;
+    content: '';
+    inset: 10px;
+    background: var(--darker-onyx);
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.future-card img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 15px;
+    margin: 2rem;
+
+}
+
+.future-card h4{
+    color: var(--ivory);
+    margin-top: 2rem;
+}
+
+.future-card p {
+    color: var(--ivory);
+}
+
+.future-card .btn:hover {
+    filter: drop-shadow(0 0 10px black);
+}
+
+.future-card .btn {
+    margin: 2rem 0 2rem 0;
+
+}
+
+@keyframes hueRotateChange{
+    from{
+        filter: hue-rotate(0deg);
+
+        transform: rotate(45deg);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+        transform: rotate(405deg);
     }
 }
